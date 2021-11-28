@@ -1,0 +1,33 @@
+.red-text {
+    color: rgb(34, 171, 180);
+    font-size: 1.2rem;
+}
+
+.transactionHash{
+    color: rgb(5, 14, 5);
+    font-size: 1.4rem;
+}
+
+.Licensemaker {
+    position: relative;
+}
+
+.Licensemaker__onTop {
+    position: absolute;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.Licensemaker__infor {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.4rem;
+}
+
+.Licensemaker__name {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
