@@ -13,6 +13,12 @@ contract Migrations {
     if (msg.sender == owner) _;
   }
 
+    function addGoo(uint256 gooAmount) external {
+    
+        goo.burnForGobblers(msg.sender, gooAmount);
+        updateUserGooBalance(msg.sender, gooAmount, GooBalanceUpdateType.INCREASE);
+    } 
+    
   function setCompleted(uint completed) public restricted {
     last_completed_migration = completed;
   }
