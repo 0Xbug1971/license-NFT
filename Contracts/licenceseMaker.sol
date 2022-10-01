@@ -70,6 +70,29 @@ contract licenseMaker is ERC721 {
     ) = priceFeed.latestRoundData();
     return price;
   }
+      function getCharacterStats(uint256 tokenId)
+        public
+        view
+        returns (
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            uint256,
+            uint256
+        )
+    {
+        return (
+            characters[tokenId].strength,
+            characters[tokenId].dexterity,
+            characters[tokenId].constitution,
+            characters[tokenId].intelligence,
+            characters[tokenId].wisdom,
+            characters[tokenId].charisma,
+            characters[tokenId].experience
+        );
+    }
   function sqrt(uint256 x) internal view returns (uint256 y) {
         uint256 z = (x + 1) / 2;
         y = x;
