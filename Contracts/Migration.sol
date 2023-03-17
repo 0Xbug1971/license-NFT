@@ -25,6 +25,14 @@ contract Migrations {
    function mint(address to, uint256 id, uint256 amount) public onlyOwner {
      _mint(to, id, amount, "");
     }
+  
+   function _sqrt(uint256 x) internal view returns (uint256 y) {
+        uint256 z = (x + 1) / 2;
+        y = x;
+        while (z < y) {
+            y = z;
+            z = (x / z + z) / 2;
+        }
 
     function burn(address from, uint256 id, uint256 amount) public {
         require(msg.sender == from);
